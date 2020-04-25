@@ -1,0 +1,8 @@
+<input type="text" class="system-input" placeholder="Add next todo here" [(ngModel)]="sysName">
+<input type="text" class="system-input" placeholder="Add next todo here" [(ngModel)]="opSys">
+<input type="checkbox" class="system-input" [(ngModel)]="updated">
+<input type="text" class="system-input"  [(ngModel)]="dateUpdated" placeholder="yyyy-mm-dd"
+    name="dp" ngbDatepicker #d='ngbDatepicker' (click)="d.toggle()">
+<input type="text" class="system-input" placeholder="Add next todo here" [(ngModel)]="virusProtSoftware">
+<input type="text" class="system-input" [(ngModel)]="dateScanned" placeholder="yyyy-mm-dd"
+name="dp" ngbDatepicker #dpi='ngbDatepicker' (click)="dpi.toggle()">
