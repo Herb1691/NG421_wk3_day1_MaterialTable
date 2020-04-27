@@ -1,0 +1,59 @@
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+  </mat-form-field>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef width="100" mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="systemName">
+      <th mat-header-cell *matHeaderCellDef width="100" mat-sort-header> System Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.systemName}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="operatingSystem">
+      <th mat-header-cell *matHeaderCellDef width="100" mat-sort-header> Operating System </th>
+      <td mat-cell *matCellDef="let element"> {{element.operatingSystem}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="systemUpdated">
+      <th mat-header-cell *matHeaderCellDef width="100" mat-sort-header> Is Updated? </th>
+      <td mat-cell *matCellDef="let element"> {{element.systemUpdated}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="updatedDate">
+        <th mat-header-cell *matHeaderCellDef width="100" mat-sort-header> Date Updated </th>
+        <td mat-cell *matCellDef="let element"> {{element.updatedDate}} </td>
+    </ng-container>
+        
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="virusProtection">
+        <th mat-header-cell *matHeaderCellDef width="100" mat-sort-header> Virus Protection </th>
+        <td mat-cell *matCellDef="let element"> {{element.virusProtection}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="scannedDate">
+        <th mat-header-cell *matHeaderCellDef width="100" mat-sort-header> Last Virus Scan </th>
+        <td mat-cell *matCellDef="let element"> {{element.scannedDate}} </td>
+    </ng-container>
+          
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+ 
+  <!-- Copyright 2019 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->

@@ -19,11 +19,65 @@ export class ComputerService {
     },
     {
       id: ++this.compID,
-      systemName: 'Original',
+      systemName: 'Appool',
       operatingSystem: 'iOS',
       systemUpdated: false,
+      updatedDate: null,
+      virusProtection: 'AVG',
+      scannedDate: new Date()
+    },
+    {
+      id: ++this.compID,
+      systemName: 'Windy',
+      operatingSystem: 'Windows 10',
+      systemUpdated: true,
+      updatedDate: new Date(),
+      virusProtection: 'Norton',
+      scannedDate: new Date()
+    },
+    {
+      id: ++this.compID,
+      systemName: 'Orange',
+      operatingSystem: 'iOS',
+      systemUpdated: true,
+      updatedDate: new Date(),
+      virusProtection: 'Norton',
+      scannedDate: new Date()
+    },
+    {
+      id: ++this.compID,
+      systemName: 'Doors',
+      operatingSystem: 'Windows 10',
+      systemUpdated: false,
+      updatedDate: null,
+      virusProtection: 'Symantec',
+      scannedDate: new Date()
+    },
+    {
+      id: ++this.compID,
+      systemName: 'Banana',
+      operatingSystem: 'iOS',
+      systemUpdated: false,
+      updatedDate: null,
+      virusProtection: 'Norton',
+      scannedDate: new Date()
+    },
+    {
+      id: ++this.compID,
+      systemName: 'Floor',
+      operatingSystem: 'Windows 10',
+      systemUpdated: true,
       updatedDate: new Date(),
       virusProtection: 'AVG',
+      scannedDate: new Date()
+    },
+    {
+      id: ++this.compID,
+      systemName: 'Melon',
+      operatingSystem: 'iOS',
+      systemUpdated: true,
+      updatedDate: new Date(),
+      virusProtection: 'Symantec',
       scannedDate: new Date()
     }
   ];
